@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+            <input type="number" name="year" id="year" placeholder="quelle année?" required>
+            <button id="bouton">Tester</button>
+    <div id="alors">    
+    </div>
+    <script>
+
+      
+
+        function IsBissextile(annee)
+        {
+        if ((annee%4==0) && ((annee%100!=0) || (annee%400==0))) {
+            document.getElementById("alors").innerHTML = "L’année "+annee+" est bissextile !";
+        }
+        else {
+            document.getElementById("alors").innerHTML = "L’année "+annee+" n’est pas bissextile !";
+        }
+        }
+
+        document.getElementById("bouton").addEventListener("click",function(e) {
+            let year = document.getElementById('year').value;
+            IsBissextile(year);
+        });
+
+        // $('#bouton').click(function(e) 
+        // {
+        //     let year = $('#year').val();
+        //     IsBissextile(year);
+        // });
+
+
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>le formulaire</title>
+</head>
+
+<body>
+    <h2> Formulaire de contact</h2>
+    <form action="" method="get">
+        <label for="nom">Nom</label><br>
+        <input type="text" name="nom" id="nom" placeholder="Saississez votre Nom">
+        <hr>
+
+        <label for="prenom">Prénom</label><br>
+        <input type="text" name="prenom" id="prenom" placeholder="saisissez votre Prénom">
+        <hr>
+
+        <input type="submit" value="envoyer">
+    </form>
+
+    <h2> Formulaire de contact2</h2>
+    <form action="" method="get" target="_blank">
+
+        <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+        <input type="radio" name="genre" value="pop" /> pop
+        <input type="radio" name="genre" value="jazz" /> jazz
+
+        <hr>
+
+        <h3> sélection</h3>
+        <select name="selection">
+            <option value="1">un</option>
+            <option value="2">deux</option>
+            <option value="3">trois</option>
+            <option value="4">banane</option>
+        </select>
+
+        <hr>
+
+        <h3> sélection</h3>
+        <select name="selection2" multiple>
+            <option value="1">un</option>
+            <option value="2">deux</option>
+            <option value="3">trois</option>
+            <option value="4">banane</option>
+            <option value="5">quenouille</option>
+            <!-- pour choisir plusieur appuyer sur ctrl + click-->
+        </select>
+
+        <hr>
+
+        <h2>Votre message</h2>
+        <textarea name="message" cols="30" rows="10" placeholder="tapez votre message ici"></textarea>
+        <br>
+
+        <h2>checkbox</h2>
+        <input type="checkbox" name="choix" id="choix">
+        <label for="choix">choix</label>
+
+        <input type="checkbox" name="scale" id="scale">
+        <label for="scale">scale</label>
+
+        <hr>
+        <h3>upload de fichier</h3>
+        <input type="file" name="fichier">
+        <br>
+
+    <!--HTML5 -->
+        <h3>age</h3>
+        <input type="number" name="age">
+        <br>
+
+        <h3>email</h3>
+        <input type="email" name="mail" placeholder="email@machin.fr">
+        <br>
+
+        <h3>password</h3>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <h3>password 2</h3>
+        <input type="password2" name="password2" id="password2" maxlenth="20" minlength="8" required>
+        <br>
+
+        <h3>date/calendier</h3>
+        <input type="date" name="date" id="date">
+        <br>
+        <br>
+
+        date début
+        <input type="date" name="date2" id="date2" 
+            value="2022-11-27"
+            min="2022-11-27" 
+            max="2022-12-27"
+            step="2">
+        
+        date fin
+        <input type="date" name="date3" id="date3" value="2022-11-27" min="2022-11-27" max="2022-12-27" step="2">
+        <br>
+        <h3>adresse web</h3>
+        <input type="url" name="url" id="url">
+        <br>
+        <fieldset title="autre elem de formulaire">
+            <legend>ex</legend>            
+            <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+            <input type="radio" name="genre" value="pop" /> pop
+            <input type="radio" name="genre" value="jazz" /> jazz        
+        </fieldset>
+    <!---->
+
+        <br>
+        <hr>
+        <input type="submit" value="envoyer">
+
+    </form>
+
+</body>
+
+</html>

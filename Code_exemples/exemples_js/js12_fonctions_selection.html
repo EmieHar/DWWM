@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="française">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>sélection</title>
+   <style>
+      #bouton,#bnav,#bnav2 {
+         width: 200px;
+         height: 60px;
+         color: brown;
+         background-color: aquamarine;
+         border: 1px solid red;
+      }
+      .style1{ 
+         color: purple;
+         font-size: large;
+         background-color: aqua;
+      }
+      .style2{
+         background-color: bisque;
+         font-size: small;
+      }
+   </style>
+</head>
+
+<body>
+   <p id="navigation" class="pclasse rouge">Mon premier paragraphe</p>
+   <p id="pieddepage" class="pclasse2">Mon deuxième paragraphe</p>
+   <p id="copyright" class="pclasse3">Mon troisième paragraphe</p>
+   <p id="contact" class="pclasse">Mon quatrième paragraphe</p>
+
+   <!-- <button id="bouton">Ici! ouhouh! Appuie ici</button> -->
+   <button id="bnav">change style de navigation</button>
+   <button id="bnav2">supprime le dernier style ajouté </button>
+
+   <script type="text/javascript">
+      let navi = document.getElementById("navigation");
+      //    console.log(navi);
+      //sélection d'un élément dont ID est navigation
+      //    setTimeout( function(){navi.innerText="coucou"},5000)
+      // document.getElementById("navigation").innerText = "coucou";
+      navi.innerHTML="<strong>un texte</strong>"
+      
+
+      //récup par leur class
+      let lesPclasses = document.getElementsByClassName("pclasse");
+      console.log(lesPclasses);
+
+      //équivalent querySelector qui fonctionne comme le selector CSS
+      console.log(document.querySelector("#pieddepage"));
+      console.log(document.querySelectorAll(".pclasse"))
+
+      //récup par leur nom
+      //    let lesElements=document.getElementsByTagName("p");
+      //    console.log(lesElements);
+
+      console.log(document.getElementsByTagName("p")[0]);
+      console.log(document.getElementsByTagName("p"));
+
+      // document.getElementById("bouton").addEventListener("click", function (evt) {
+      //    // console.log("cible:", evt.target)
+      //    // console.log("type:", evt.type)
+      //    // console.log("X:", screenX)
+      //    // console.log("Y:", screenY)
+
+      //    // alert("ça va PETER");
+
+      //    //events souris
+      //    //      clik, douclik, mouseover/mouseout, mouseenter/mouseleave, mousedown,mousemove
+      //    //      
+      //    //events formulaires
+      //    //      kerydown, keyup
+      //    //      focus, submit, blur, change
+
+      //    //modifier le contenu du paragraphe navigation
+
+      //    // document.getElementById("navigation").innerText = "Bienvenue chez moi";
+      //    // document.getElementById("navigation").style.display = "none";
+      //    // document.getElementById("navigation").style.color = "brown";
+
+      //    let n= document.getElementById("navigation");
+      //    // console.log(n.classList)
+      //    n.classList.add("style1")
+      //    n.classList.remove("style1")
+
+         
+      // });
+
+      document.getElementById("bnav").addEventListener("click", function(){
+            document.getElementById("navigation").classList.add("style1")
+         });
+         document.getElementById("bnav2").addEventListener("click", function(){
+            document.getElementById("navigation").classList.remove("style1")
+         })
+   </script>
+</body>
+
+</html>

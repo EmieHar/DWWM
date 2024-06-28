@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonction parent</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        p {
+            width: 300px;
+            height: 200px;
+            background-color: lavender;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="autour">
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet<span> consectetur</span> adipisicing elit. Enim ipsum nam corporis odio ut? Ab
+                fugiat minima nobis tenetur. </p>
+            <p>autre paragraphe</p>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            $("span").parents("main")//tous les parents au dessus
+                .css("border", "2px solid red")
+                .css("color", "brown");
+
+                $("span").parent()//parent direct
+                .css("border", "2px solid green")
+                .css("color", "brown");
+        });
+
+    </script>
+</body>
+
+</html>

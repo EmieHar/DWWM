@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Exo 5</title>
+    <style>
+        #color_change {
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            /* 
+            Ecrire le script qui change la couleur de toutes 
+            toutes les occurrences du mot Bleu 
+            */
+
+            $(document).on("click", "#button_change", function (event) {
+                var color = $("#input_color").val();
+                $(".car_color").css("color", color);
+            }); 
+        }); 
+    </script>
+</head>
+
+<body>
+    <h2>La voiture <span class="car_color">Bleue</span> </h2>
+    <p> La voiture est de couleur <span class="car_color">Bleue</span> mais on peut changer la couleur
+    </p>
+    Changer la couleur de la voiture :
+    <input id="input_color" value="rouge"></input>
+
+    <button id="button_change">Changer !</button>
+</body>
+
+</html>

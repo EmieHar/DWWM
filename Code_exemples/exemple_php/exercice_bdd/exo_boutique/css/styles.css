@@ -1,0 +1,82 @@
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    width: 300px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: beige;
+}
+
+nav ul li{
+    display: inline-block;  
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+nav ul li a:hover{
+    color: brown;
+}
+
+.produits{
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.produit img{
+    width: 200px;
+    height: 300px;
+    padding-top: 5px;
+}
+
+
+.produit{
+    width:33%;
+    height: auto;
+    border: 1px solid;
+    padding: 20px 50px;
+    text-align: center;
+}
+.cache{
+    display: none;
+    font-weight: bold;
+    font-size: larger;
+}
+footer{
+    width:100%;
+    padding:10px;
+    ;
+}
+
+footer ul li{
+    list-style: none;
+    
+}

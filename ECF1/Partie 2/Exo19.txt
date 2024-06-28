@@ -1,0 +1,4 @@
+La function jQuery $("table tr:nth-child(even)").addClass("even");
+
+ajoute la classe even à toutes les éléments enfants pairs du tableau, 
+c'est-à-dire les prénoms dans cet exemple

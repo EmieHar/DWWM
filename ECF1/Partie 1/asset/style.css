@@ -1,0 +1,58 @@
+body {
+    margin: auto;
+    padding: auto;
+    width: 900px;
+
+}
+
+h1 {
+    margin: 5px 10px;
+    padding-left:4px;
+    border-left: 1px solid black;
+}
+
+div {
+    text-align: center;
+    color: #fff;
+}
+
+.conteneur{
+    background: blue;
+}
+
+.box {
+    display: inline-block;
+    background: #dba634;
+    padding: 2% 2% 0 2%;
+    height: 40px;
+    width: 100px;
+}
+
+.box:hover {
+    background: blue;
+}
+
+aside {
+    float:left;
+    width: 15%;
+    height: 400px;
+    background: lavender;
+}
+
+article {
+   float: right;
+    width: 85%;
+    height: 400px;
+    background: coral;
+}
+
+article iframe {
+    padding-top: 40px;
+    padding-left:100px;
+}
+
+footer {
+    clear: both;
+    background: silver;
+    font-size: 10px;
+}

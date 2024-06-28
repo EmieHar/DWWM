@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery2</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        div{
+            height:200px;
+            width:200px;
+            background-color: brown;
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="row1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic repellat nostrum necessitatibus possimus labore! At ea ipsa, explicabo assumenda sunt nemo, obcaecati ullam accusantium consequuntur ex possimus harum! Culpa.</div>
+        <div class="row" id="row2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut molestiae dolorem nam a mollitia! Doloribus deleniti, expedita optio iusto earum nulla quod reiciendis assumenda iste rerum nisi voluptatibus facilis sunt.</div>
+        <div class="row" id="row3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore aliquam quibusdam deleniti eos blanditiis quia autem sint repellendus velit repellat laboriosam ut nobis itaque cumque, voluptate alias sit laudantium in!</div>
+        <div class="row" id="row4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo repudiandae nam natus, omnis velit cupiditate in! Doloremque nesciunt dolore aliquid veritatis distinctio aut? Sunt optio assumenda quis quibusdam architecto.</div>
+        <div class="row" id="row5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam voluptate veritatis optio exercitationem, quidem impedit error maiores, eos, molestias perspiciatis suscipit voluptatibus. Voluptate, quas. Dolores, enim ipsum. Dolorem, tempora.</div>
+        <div class="row" id="row6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eveniet vitae qui quia blanditiis, at voluptate laudantium voluptatem distinctio neque harum aliquid reiciendis natus pariatur nisi quam reprehenderit quae ut?</div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            // $(".row").mouseover(function(){
+            //     $(this).css("background-color","lavender");
+            // });
+            // $(".row").mouseout(function(){
+            //     $(this).css("background-color","brown");
+            // });
+
+            $(".row").mouseover(function(){
+                console.log($(this).attr("id"))
+                let lid = $(this).attr("id")
+                $("#"+lid).css("background","purple")
+            })
+        })
+    </script>
+</body>
+</html>

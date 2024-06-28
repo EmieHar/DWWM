@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Exo 7</title>
+
+    <script>
+
+        function multiplyBy(number) {
+            const closedVar = number;
+            return function (num) {
+                return closedVar * num;
+            }
+
+        }
+
+
+        let mult_2 = multiplyBy(2);
+        console.log(mult_2(3)) // résultat -> 6
+        console.log(mult_2(4)) // résultat -> 8
+        let mult_3 = multiplyBy(3);
+        mult_3(3) // résultat -> 9 
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

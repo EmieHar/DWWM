@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+</head>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Horloge</title>
+	<style>
+		/* Positions des chiffres sur le cadran*/
+		#chiffre12 {
+			position: absolute;
+			top: 100px;
+			left: 200px
+		}
+
+		#chiffre11 {
+			position: absolute;
+			top: 113px;
+			left: 150px
+		}
+
+		#chiffre10 {
+			position: absolute;
+			top: 150px;
+			left: 113px
+		}
+
+		#chiffre9 {
+			position: absolute;
+			top: 200px;
+			left: 100px
+		}
+
+		#chiffre8 {
+			position: absolute;
+			top: 250px;
+			left: 113px
+		}
+
+		#chiffre7 {
+			position: absolute;
+			top: 287px;
+			left: 150px
+		}
+
+		#chiffre6 {
+			position: absolute;
+			top: 300px;
+			left: 200px
+		}
+
+		#chiffre5 {
+			position: absolute;
+			top: 287px;
+			left: 250px
+		}
+
+		#chiffre4 {
+			position: absolute;
+			top: 250px;
+			left: 287px
+		}
+
+		#chiffre3 {
+			position: absolute;
+			top: 200px;
+			left: 300px
+		}
+
+		#chiffre2 {
+			position: absolute;
+			top: 150px;
+			left: 287px
+		}
+
+		#chiffre1 {
+			position: absolute;
+			top: 113px;
+			left: 250px
+		}
+
+		/* Position du rond central*/
+		#centre {
+			position: absolute;
+			top: 200px;
+			left: 200px;
+			font-family: arial
+		}
+
+		/* Positions initiales des aiguilles */
+		#aiguilleheure {
+			position: absolute;
+			top: 110px;
+			left: 200px
+		}
+
+		#aiguilleminute {
+			position: absolute;
+			top: 110px;
+			left: 200px
+		}
+	</style>
+
+	<script>
+
+		$(document).ready(function tourne() {
+			var compteur_minutes = 0;
+			var compteur_heures = 0;
+			$("#chiffre" + compteur_heures)
+
+			let go = false;
+
+			$("#lancer").click(function () {
+				
+
+				if (go == false) {
+					go = true
+
+					let interval = setInterval(function () {
+
+						console.log("minute:" + compteur_minutes)
+
+						if (indic == false) {
+							clearInterval(interval)
+							go = false
+						}
+
+						if (compteur_minutes == 12) {
+							compteur_minutes = 0
+							compteur_heures++
+
+
+							$("#aiguilleheure").offset($("#chiffre" + compteur_heures).offset())
+
+							// heures.css("top",`$("#chiffre" + compteur_heures).offsetTop + "px"`)
+							// heures.css("left",`$("#chiffre" + compteur_heures).offsetTop + "px"`)
+
+							console.log(compteur_heures)
+
+							if (compteur_heures == 12) {
+								compteur_heures = 0
+							}
+						}
+						compteur_minutes++
+
+						$("#aiguilleminute").offset($("#chiffre" + compteur_minutes).offset())
+						// minutes.css("top",`$("#chiffre" + compteur_minutes).offsetTop + "px"`)
+						// minutes.css("left",`$("#chiffre" + compteur_minutes).offsetTop + "px"`)								
+
+					}, 1000)
+
+				}
+
+			});
+
+		});
+
+
+
+	</script>
+
+</head>
+
+<body>
+
+	<p>Une petite horloge...<input id="lancer" type="button" value="Lancer!" onclick="indic=true"><input
+			type="button" value="Arrêter!" onclick="indic=false"></p>
+	<div id="chiffre1">
+		<p>1</p>
+	</div>
+	<div id="chiffre2">
+		<p>2</p>
+	</div>
+	<div id="chiffre3">
+		<p>3</p>
+	</div>
+	<div id="chiffre4">
+		<p>4</p>
+	</div>
+	<div id="chiffre5">
+		<p>5</p>
+	</div>
+	<div id="chiffre6">
+		<p>6</p>
+	</div>
+	<div id="chiffre7">
+		<p>7</p>
+	</div>
+	<div id="chiffre8">
+		<p>8</p>
+	</div>
+	<div id="chiffre9">
+		<p>9</p>
+	</div>
+	<div id="chiffre10">
+		<p>10</p>
+	</div>
+	<div id="chiffre11">
+		<p>11</p>
+	</div>
+	<div id="chiffre12">
+		<p>12</p>
+	</div>
+	<div id="centre">
+		<p>o</p>
+	</div>
+
+	<div><img alt="heures" src="rondbleu.png" height="21" id="aiguilleheure" width="21"></div>
+	<div><img alt="minutes" src="rondrouge.png" height="21" id="aiguilleminute" width="21"></div>
+
+</body>
+
+</html>

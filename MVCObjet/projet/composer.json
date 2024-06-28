@@ -1,0 +1,13 @@
+{
+    "name": "emhar/projet",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Projet\\": "src/"
+        }
+    },
+    "require": {
+        "klein/klein": "^2.1",
+        "twig/twig": "^3.5"
+    }
+}

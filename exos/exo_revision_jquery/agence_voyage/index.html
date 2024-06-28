@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+
+    <title>Travel Agency</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+
+            <h1 id="h1">Travel Agency<span class="orange">.</span></h1>
+            <input class="inp" id="lh1" type="text">
+            <nav>
+                <ul>
+                    <li><a id="a1" href="#main-image">Accueil</a>
+                        <input class="inp" id="la1" type="text">
+                    </li>
+                    <li><a id="a2" href="#steps">Destinations</a>
+                        <input class="inp" id="la2" type="text">
+                    </li>
+                    <li><a id="a3" href="#contact">Contact</a>
+                        <input class="inp" id="la3" type="text">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main-image" onclick="slide(2)">
+        <div class="wrapper">
+            <h2 id="h2">Organisez votre<br><strong>voyage sur mesure</strong></h2>
+            <input class="inp" id="lh2" type="text">
+            <a href="#" class="button-1" id="btn1">Par ici</a>
+            <input class="inp" id="lbtn1" type="text">
+        </div>
+    </section>
+
+    <section id="steps">
+        <div class="wrapper">
+            <ul>
+                <li id="step-1">
+                    <h4 id="s1">Planifier</h4>
+                    <input class="inp" id="ls1" type="text">
+                    <p id="p1">Confiez-nous vos rêves d’évasion : en famille ou entre amis, nous trouverons la formule qui
+                        comblera vos attentes.</p>
+                    <input class="inp" id="lp1" type="text">
+                </li>
+                <li id="step-2">
+                    <h4 id="s2">Organiser</h4>
+                    <input class="inp" id="ls2" type="text">
+                    <p id="p2">Bénéficiez de l’expertise de nos spécialistes de chaque destination, ils vous accompagnent dans
+                        la réalisation de votre voyage.</p>
+                    <input class="inp" id="lp2" type="text">
+                </li>
+                <li id="step-3">
+                    <h4 id="s3">Voyager</h4>
+                    <input class="inp" id="ls3" type="text">
+                    <p id="p3">Nous nous chargeons d’assurer votre sécurité et de veiller à votre pleine sérénité tout au long
+                        de votre voyage.</p>
+                    <input class="inp" id="lp3" type="text">
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="wrapper">
+            <h3 id="h3">Contactez-nous</h3>
+            <input class="inp" id="lh3" type="text">
+            <p id="pc">Chez Travel Agency nous savons que voyager est une aventure humaine mais également un engagement
+                financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte
+                chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur
+                mesure.</p>
+            <input class="inp" id="lpc" type="text">
+            <form>
+                <label id="1" for="name">Nom</label>
+                <input class="inp" id="l1" type="text">
+                <input type="text" name="name" placeholder="Votre nom">
+                <label id="2" for="email" >Email</label>
+                <input class="inp" id="l2" type="text">
+                <input type="text" placeholder="Votre email">
+                <input type="submit" value="OK" id="btn3" class="button-3">
+                <input class="inp" id="lbtn3" type="text">
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="wrapper">
+            <h1 id="ft">Travel Agency<span class="orange">.</span></h1>
+            <input class="inp" id="lft" type="text">
+            <div class="copyright">Copyright © Tous droits réservés.</div>
+        </div>
+    </footer>
+
+
+    <script>
+        $(document).ready(function () {
+            function slide(n) {
+                var elem = document.getElementById('main-image');
+                elem.setAttribute("style", "background-image:url(images/main" + n + ".jpg");
+            }
+            
+
+
+           $(document).on("click",function(event){
+        
+                event.preventDefault()
+   
+                let id = $(event.target).attr('id');
+                if(("#" + id) == "#h1"  || ("#" + id) == "#a1" || ("#" + id) ==  "#a2" || ("#" + id) == "#a3" || ("#" + id) == "#h2" || ("#" + id) == "#btn1" || ("#" + id) ==  "#s1" || ("#" + id) ==  "#p1" || ("#" + id) ==  "#s2" || ("#" + id) ==  "#p2" || ("#" + id) ==  "#s3" || ("#" + id) == "#p3" || ("#" + id) ==  "#h3" || ("#" + id) ==  "#pc" || ("#" + id) ==  "#1" || ("#" + id) ==  "#2" || ("#" + id) ==  "#btn3" || ("#" + id) ==  "#ft"){
+                    console.log("alléluia")
+
+                        $("#"+id).hide();
+                //     console.log("#" + id)
+     
+
+                    $("#l"+ id).show()
+               
+                //     console.log("#l" + id)
+
+                    $("#l"+ id).blur(function () {
+                    
+                        console.log("test")
+
+                        $("#"+id).text($(this).val())
+                        $("#"+id).show()
+                        $(this).hide()
+                    })
+
+                }else{
+                    console.log('nope')
+                }  
+            }) 
+                
+            
+               
+                
+            // $("#h1").click(function () {
+            //     $(this).hide()
+            //     $("#lh1").show()
+            //     $("#lh1").blur(function () {
+            //         $("#h1").text($(this).val())
+            //         $("#h1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#a1").click(function () {
+            //     $(this).hide()
+            //     $("#la1").show()
+            //     $("#la1").blur(function () {
+            //         $("#a1").text($(this).val())
+            //         $("#a1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#a2").click(function () {
+            //     $(this).hide()
+            //     $("#la2").show()
+            //     $("#la2").blur(function () {
+            //         $("#a2").text($(this).val())
+            //         $("#a2").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#a3").click(function () {
+            //     $(this).hide()
+            //     $("#la3").show()
+            //     $("#la3").blur(function () {
+            //         $("#a3").text($(this).val())
+            //         $("#a3").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("h2").click(function () {
+            //     $(this).hide()
+            //     $("#lh2").show()
+            //     $("#lh2").blur(function () {
+            //         $("h2").text($(this).val())
+            //         $("h2").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#btn1").click(function () {
+            //     $(this).hide()
+            //     $("#lbtn1").show()
+            //     $("#lbtn1").blur(function () {
+            //         $("#btn1").text($(this).val())
+            //         $("#btn1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#s1").click(function () {
+            //     $(this).hide()
+            //     $("#ls1").show()
+            //     $("#ls1").blur(function () {
+            //         $("#s1").text($(this).val())
+            //         $("#s1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#p1").click(function () {
+            //     $(this).hide()
+            //     $("#lp1").show()
+            //     $("#lp1").blur(function () {
+            //         $("#p1").text($(this).val())
+            //         $("#p1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#s2").click(function () {
+            //     $(this).hide()
+            //     $("#ls2").show()
+            //     $("#ls2").blur(function () {
+            //         $("#s2").text($(this).val())
+            //         $("#s2").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#p2").click(function () {
+            //     $(this).hide()
+            //     $("#lp2").show()
+            //     $("#lp2").blur(function () {
+            //         $("#p2").text($(this).val())
+            //         $("#p2").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            //  $("#s3").click(function () {
+            //     $(this).hide()
+            //     $("#ls3").show()
+            //     $("#ls3").blur(function () {
+            //         $("#s3").text($(this).val())
+            //         $("#s3").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#p3").click(function () {
+            //     $(this).hide()
+            //     $("#lp3").show()
+            //     $("#lp3").blur(function () {
+            //         $("#p3").text($(this).val())
+            //         $("#p3").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("h3").click(function () {
+            //     $(this).hide()
+            //     $("#lh3").show()
+            //     $("#lh3").blur(function () {
+            //         $("h3").text($(this).val())
+            //         $("h3").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#pc").click(function () {
+            //     $(this).hide()
+            //     $("#lpc").show()
+            //     $("#lpc").blur(function () {
+            //         $("#pc").text($(this).val())
+            //         $("#pc").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#1").click(function () {
+            //     $(this).hide()
+            //     $("#l1").show()
+            //     $("#l1").blur(function () {
+            //         $("#1").text($(this).val())
+            //         $("#1").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#2").click(function () {
+            //     $(this).hide()
+            //     $("#l2").show()
+            //     $("#l2").blur(function () {
+            //         $("#2").text($(this).val())
+            //         $("#2").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            // $("#btn3").click(function () {
+            //     $(this).hide()
+            //     $("#lbtn3").show()
+            //     $("#lbtn3").blur(function () {
+            //         $("#btn3").attr("value",$(this).val())
+            //         $("#btn3").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+            //  $("#ft").click(function () {
+            //     $(this).hide()
+            //     $("#lft").show()
+            //     $("#lft").blur(function () {
+            //         $("#ft").text($(this).val())
+            //         $("#ft").show()
+            //         $(this).hide()
+            //     })
+            // })
+
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

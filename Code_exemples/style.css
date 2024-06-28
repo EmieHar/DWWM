@@ -1,0 +1,16 @@
+
+.nav1,.nav2,.nav3 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: max-content;
+    padding: 5px;
+}
+
+.cache {
+    display: none;
+}
+
+a {
+    display: block;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+</head>
+
+<style>
+    .container {
+        background-color: silver ;
+        display: flex ;
+    }
+    .item {
+        color:white ;
+        background-color: blueviolet;
+        height:200px;
+        border: 1px solid white ;
+    }
+    .item:nth-child(1) {
+       flex-basis: 200px ;
+       /* il va prendre au minium 200px puis répartir le reste en 2 dans ce cas-ci. */
+       flex-grow: 1;
+    }
+    .item:nth-child(2) {
+       flex-grow: 1;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+    </div>
+</body>
+</html>

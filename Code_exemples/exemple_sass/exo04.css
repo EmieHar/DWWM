@@ -1,0 +1,16 @@
+.info {
+  background: darkgray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff; }
+
+.alert {
+  background: darkred;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff; }
+
+.info {
+  background: darkgreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff; }
+
+/*# sourceMappingURL=exo04.css.map */

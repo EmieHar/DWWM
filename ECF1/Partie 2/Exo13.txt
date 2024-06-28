@@ -1,0 +1,8 @@
+Cette fonction jQuery:
+
+(document).ready(function() { 
+ …
+}); 
+
+sert à attendre que le document soit chargé avant d'executer ce qui sera à la place 
+des points de suspension

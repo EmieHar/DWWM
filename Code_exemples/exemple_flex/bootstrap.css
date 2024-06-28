@@ -1,0 +1,29 @@
+.container {   
+    background-color: orange;
+    border-collapse: collapse;
+}
+.row { 
+    display: flex;
+    flex-wrap: wrap;
+}
+.row div{
+    border: 1px solid;
+}
+.col-6{
+    flex-grow: 6;
+}
+.col-4{
+    flex-grow: 4;
+}
+.col-2{
+    flex-grow: 2;
+}
+.col-1{
+    flex-grow: 1;
+}
+@media screen ans (max-device-width:700px) {
+    .col-xs-12{
+        flex:0 0 auto;
+        width:99.4%
+    }
+}

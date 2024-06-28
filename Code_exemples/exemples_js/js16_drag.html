@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag</title>
+</head>
+<style>
+    div {
+        background-color: orange;
+        width: 100px;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <h1>Document</h1>
+    <div></div>
+
+    <script>
+        let bar = document.querySelector("div")
+        //afficher l'event quand je clique en maintenant la souris en bas sur cette barre
+        // bar.addEventListener("mousedown", (event) => {//fonction fléchée
+        //     // console.log(event);
+        //     // console.log("bouton souris:" ,event.button);
+        //     // console.log("X:", event.clientX);
+        //     let dernierX = event.clientX;
+        //     window.addEventListener("mousemove", (event2) => {//écoute event sur toute la fenêtre
+        //         // console.log("X:",event2.clientX+"Y:"+event2.clienY)
+        //         let dist = event2.clientX - dernierX;
+        //         console.log(bar.offsetWidth.dist)
+        //         bar.style.width = dist + "px"
+        //     })
+        // })
+        let dernierX
+        bar.addEventListener("mousedown", (event) => {
+            dernierX = event.clientX;
+            window.addEventListener("mousemove",moved)
+        })
+        function moved(event){
+            console.log(event)
+            if (event.buttons == 0){
+                window.removeEventListener("mousemove",moved)
+            } else{
+                let dist = event.clientX - dernierX;
+                console.log(bar.offsetWidth + dist)
+                bar.style.width = dist + "px"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

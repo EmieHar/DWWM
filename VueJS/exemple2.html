@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>VueJS</title>
+    
+</head>
+<body>
+    <h1>Essai2 Vue3</h1>
+    <div id="app">
+        <button @click="increase">ajoute 1</button>
+        <button @click="increment(4)">ajoute x</button>
+
+        <h3>{{compteur}}</h3>
+
+        <p v-on:mouseover="hover">Survol du paragraphe</p>
+        <p>{{nomDuTag}}</p>
+
+        <hr>
+        présentation: {{presentation}} <br>
+
+        <p v-show="nom.length < 2">Veuillez saisir votre nom:</p>
+        nom: <input type="text" v-model="nom"><br>
+
+        <p  v-show="prenom.length < 2" >Veuillez saisir votre prénom:</p>
+        prenom:<input type="text" v-model="prenom"><br><br>
+        <button  @click="fonction">Connexion</button>
+        <p>{{data}}</p>
+
+        <hr>
+        <button @click="ajoute">+++</button>
+        <button @click="decremente">---</button>
+        <h3>{{compteur}}</h3>
+         <p>{{ queletat}}</p>
+        
+        
+    </div>
+
+    <script>
+       const {createApp} = Vue
+
+       createApp({
+        data() { 
+            return{
+                compteur:0,
+                nomDuTag:"cheh",
+                nom: "",
+                prenom:"",
+                data: ""
+        
+            }
+        },
+
+        computed:{
+            queletat: function(){
+                return this.compteur < 0 ? "negatif" : "positif"
+            },
+
+            presentation: function(){
+                return "Bonjour je suis " + this.prenom + " " + this.nom
+            }
+        },
+
+        methods:{
+            increase: function(){this.compteur++;},
+            increment: function(nombre,event){
+                this.compteur += nombre
+                
+            },
+            fonction(){
+                this.data = this.data + "Bienvenue " + this.nom + " " + this.prenom + " !";
+            },
+            hover:function(event){
+                console.log(event.target.tagName)
+            },
+
+            ajoute:function(){
+                this.compteur++;
+
+            },
+
+            decremente:function(){
+                this.compteur--;
+            }
+        },
+
+       }).mount("#app")
+
+    </script>
+</body>
+</html>

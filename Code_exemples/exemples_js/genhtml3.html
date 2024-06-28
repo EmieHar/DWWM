@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .pclasse {
+            color:brown ; background-color: aqua;
+        }
+
+        .pclasse2 {
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+
+        // function donneElementParId(id) {
+        //     for (i in monhtml) {
+        //         if (id == monhtml[i].id) {
+        //             return monhtml[i]
+        //         }
+        //     }
+        // }
+
+        // version française de la fonction getElementByClassName
+
+        function donneElementsParClasse(laclasse) {
+            // créer un tableau
+            tab=[]
+            for (i in monhtml) { 
+                // récupérer dans un tableau les objets (elements) dont la classe est égale à "laclasse"
+                if(laclasse == monhtml[i].classe){
+                    tab.push( monhtml[i])
+                }
+            }
+            return tab
+        }
+
+        function balise(tag, id , classe , contenu , css ) {
+            this.tag = tag;
+            this.id = id;
+            this.classe = classe;
+            this.contenu = contenu;
+            this.css = css;
+            this.affiche = function() {
+                // document.write(`<style> ${tag}#${id} { `) 
+                //             for (i in this.css) {
+                //                 document.write(` ${i} : ${this.css[i]}  `)
+                //                 document.write(`}`) 
+                //             }
+                //             document.write("</style>")
+                document.write(`<${this.tag} id="${this.id}" class="${this.classe}" > ${this.contenu}</${this.tag}>`)
+            }
+        }
+
+        
+                let css = { color: "blue" , background: "yellow" }
+
+                let p1 = new balise("p","navigation","pclasse","lorem ipsum deddz dzedzd ",css)
+                let p2 = new balise("p","pieddepage","pclasse2","zefz efze fze fze fzf zf",css)
+                let p3 = new balise("p","copyright","pclasse3","un autre texte ",css)
+                let p4 = new balise("p", "nav", "pclasse", "une autre patate ", css)
+                let p5 = new balise("p", "navi", "pclasse2", "un autre texte encore ", css)
+                let p6 = new balise("p", "lala", "pclasse", "un autre texte toujours ", css)
+                
+                const monhtml = { p1,p2,p3,p4,p5,p6 } 
+
+                // for (i in monhtml) {
+                //         monhtml[i].affiche();
+                // }
+
+        //   setTimeout(decollage,5000)
+            //  let navi = donneElementParId("navigation") // dont l'id = qui s'appelle
+            //  console.log(navi)
+            //  setTimeout(function(){ 
+            //      navi.contenu = "changement par la fonction donneelementParID;"
+            //     for (i in monhtml) {
+            //              monhtml[i].affiche()
+            //      }
+            //  },5000)
+
+            let lesElements = donneElementsParClasse("pclasse") ;
+            console.log(lesElements)
+            // console.log(lesElements.affiche()) ;
+            // ajouter la classe pclasse2 à la classe existante au bout de 8 secondes.
+            setTimeout(function () {
+                 lesElements.classe = classe + "pclasse2"
+                for (i in monhtml) {
+                        //  monhtml[i].affiche()
+                    }
+             },8000)
+
+    </script>
+ 
+</body>
+</html>

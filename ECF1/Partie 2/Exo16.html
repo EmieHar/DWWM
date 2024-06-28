@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Exo 16</title>
+</head>
+
+<body>
+Numéro de téléphone à tester:<input id="numero" type="text">
+
+    <script>
+
+        $(document).ready(function () {
+            $('#numero').blur(function (e) {
+                if (validerTel('numero')) {
+                    console.log("true")
+                }
+                else {
+                    console.log("false")
+                }
+            });
+        });
+
+        function validerTel(phone) {
+            var tel = document.getElementById(phone).value;
+            var regex = /^(0|\+33)[1-9][0-9]{8}/;
+            if (regex.test(tel)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

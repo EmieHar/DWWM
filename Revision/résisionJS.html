@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style type="text/css">
+        #dessin {
+            height: 400px;
+        }
+
+        .point {
+            height: 8px;
+            width: 8px;
+            border-radius: 4px;
+            background-color: brown;
+            position: absolute;
+        }
+
+        .point2 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: lavender;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <button id="b1">Click me</button>
+    <button id="b2">Réactive l'autre</button>
+
+    <a href="http://www.google.fr">Google</a> -->
+
+    <div id="dessin">
+
+    </div>
+
+    <script type="text/javascript">
+        // let lien = document.querySelector('a');
+        // lien.addEventListener('click', function(event) {
+        //     console.log('Google pas glop, vas ailleurs');
+        //     event.preventDefault();
+        // });
+
+        // window.addEventListener("keydown", function(e){
+        //     if (e.key == 'r') {
+        //         document.body.style.backgroundColor = 'red';
+        //         console.log('bouya');
+        //     }
+        // });
+
+        // window.addEventListener("keyup", function(e){
+        //     if (e.key == 'r') {
+        //         document.body.style.backgroundColor = 'purple';
+        //         console.log('zbraaa');
+        //     }
+        // });
+
+        // window.addEventListener("keydown", function(e){
+        //     if (e.key == 's' && e.ctrlKey) {
+        //         console.log('sauvegardé');
+        //     }
+        // });
+
+        // window.addEventListener("click", function(e){
+        //     console.log("x" + e.pageX + " -y:" + e.pageY);
+        //     let point = document.createElement("div");
+        //     point.className = "point";
+        //     point.style.left = e.pageX + "px";
+        //     point.style.top = e.pageY + "px";
+        //     document.getElementById("dessin").appendChild(point);
+        // });
+
+        // window.addEventListener("mousemove", function(e){
+        //     let point = document.createElement("div");
+        //     point.className = "point2";
+        //     point.style.left = e.pageX + "px";
+        //     point.style.top = e.pageY + "px";
+        //     document.getElementById("dessin").appendChild(point);
+        // });
+
+        // let start = false;
+
+        // function dessine(e) {
+        //    // console.log(e)
+        //         let point = document.createElement("div");
+        //         point.className = "point";
+        //         point.style.left = e.pageX + "px";
+        //         point.style.top = e.pageY + "px";
+        //         document.getElementById("dessin").appendChild(point);
+        // }
+
+        // window.addEventListener("mousedown", function(e){
+        //     console.log("mouseDown")
+        //     window.addEventListener("mousemove", dessine);
+        // });
+       
+
+        // window.addEventListener("mouseup", (e) => {
+        //     console.log("up")
+        //     window.removeEventListener("mousemove", dessine); 
+        // });
+
+        $(document).ready(function(){
+            $(window).click(function(e){
+                $("#dessin").addClass('point');
+                $(".point").css("left", e.pageX +" px");
+                $(".point").css("top", e.pageY +" px");
+                $("#dessin").append(".point");
+            })
+           
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exemple_css.css">
+    <title>exemple css</title>
+    <style>
+        body{
+            font-family: "Arial";
+            font-size: 20px;
+            background-color: lavender;
+        }
+        p{
+            color: blueviolet;
+            font-size: 1.4em;
+        }
+        em{
+            color: teal;
+        }
+        p#special { color: azure;}
+        #autre{ color: green;}
+        p.zz{ background-color: silver;}
+        ul li:first-child{ background-color:green;}
+        ul li:last-child{ background-color: tomato;}
+        ul li:nth-child(3){ background-color: aqua;}
+        ul li:nth-child(2n){color: burlywood;}
+        ul.ll li:nth-child(2n-1){ color: blueviolet;}
+    </style>
+</head>
+<body>
+    <p>1 paragraphe <em> avec emphase</em></p>
+    <p id="special" class="zz">une autre paragraphe</p>
+    <p id="autre" class="zz">un autre second paragraphe </p>
+
+    <h2>pseudo classes</h2>
+    <ul class="ll"> 
+        <li>premier enfant</li>
+        <li>deuxième enfant</li>
+        <li>troisième enfant</li>
+        <li>dernier enfant</li>
+    </ul>
+    <h2>pseudo classes2</h2>
+    <ul> 
+        <li>premier </li>
+        <li>deuxième</li>
+        <li>troisième</li>
+        <li>dernier</li>
+    </ul>
+    <hr>
+    
+    
+</body>
+</html>

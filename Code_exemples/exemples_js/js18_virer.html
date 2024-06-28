@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread/destructuring</title>
+</head>
+<body>
+    <script>
+        function somme(...tab){
+            //...veut dire transforme la liste d'arguments en tableau tab
+            let total=0
+
+            for(let i=0; i<tab.length; i++){
+                total += tab[i]
+            }
+
+            return total // return quitte la fonction
+        }
+        // console.log(somme(4,5,3,8,9))
+//-------------------------------------------------------------------------------------
+        let t1=[1,2,3,4];
+        let t2=[5,6,7];
+
+        // t1 = t1.concat(t2)
+        // console.log(t1)
+
+        // let t3=[...t1,...t2];//... transforme un tableau en liste de variables
+        // console.log(t3)
+//-------------------------------------------------------------------------------------
+        // destructuring array
+        [a,b,c]= t2
+        // console.log(a);
+        // console.log(typeof a);
+        // console.log(b);
+        // console.log(c);
+
+        let x=2, y=4;
+        [x,y] = [y,x]
+        // console.log(x);
+        // console.log(y);
+// --------------------------------------------------------------------------------------
+        // destructuring objet
+        const person = {
+            nom: 'snow',
+            prenom:'John',
+            age:25
+        }
+
+        const {nom,prenom}=person
+        // console.log(prenom)
+        // console.log(typeof nom)
+        // console.log(nom)
+
+//--------------------------------------------------------------------------------------
+        const desPerson=[
+            {nom:'Bidule',prenom:'John'},
+            {nom:'Machin',prenom:'Truc'}
+    ]
+        
+        for(const{prenom} of desPerson){
+            console.log(prenom);
+        }
+    </script>
+</body>
+</html>

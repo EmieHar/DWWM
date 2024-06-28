@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="toto">
+
+    </div>
+
+
+    <script>
+        let newP = document.createElement("p");
+        let newTxt = document.createTextNode("contenu");
+        newP.appendChild(newTxt);
+
+        let maDiv = document.getElementById("toto");
+        maDiv.appendChild(newP);
+
+        let monA = document.createElement("a");
+        monA.setAttribute("href", "http://example.com");
+        monA.setAttribute("title", "Exemple");
+
+        let monText = document.createTextNode("Le site example.com");
+        monA.appendChild(monText);
+
+        maDiv.appendChild(monA);
+
+
+
+  
+   
+            let journal = [
+                {
+                    titre: "titre1",
+                    events: ["work", "touched tree", "pizza", "running", "television"],
+                },
+                {
+                    titre: "titre2",
+                    events: ["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"],
+                },
+                {
+                    titre: "titre3",
+                    events: ["weekend", "cycling", "break", "peanuts", "beer"],
+                },
+                {
+                    titre: "l'été",
+                    events: ["weekend", "cycling", "break", "peanuts", "beer"],
+                },
+            ];
+
+            journal.forEach(function (elt) {
+               
+                let newTitre = document.createElement("h1"); 
+               
+
+                let newTxt = document.createTextNode(elt.titre);
+                newTitre.appendChild(newTxt);
+
+                maDiv.appendChild(newTitre);
+
+                let newUl = document.createElement("ul");
+                maDiv.appendChild(newUl);
+
+                let eventes = elt.events;
+
+                eventes.forEach(function (event) {
+                    
+                    let newLi = document.createElement("li");
+                    let newText = document.createTextNode(event);
+                    newLi.appendChild(newText);
+                    newUl.appendChild(newLi);
+        
+        })
+    })
+</script>
+
+
+</body>
+
+</html>

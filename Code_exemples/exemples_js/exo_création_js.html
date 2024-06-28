@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tablo">
+
+    </div>
+        <script type="text/javascript">
+            const montablo = [
+                { nom: "pierre", titre: "Doctor", adresse: { norue: "8", rue: "rue jean-jaures", cp: "29200", ville: "BREST" } },
+                { nom: "paul", titre: "Pr", adresse: { norue: "28", rue: "du port", cp: "79200", ville: "TOULON" } },
+                { nom: "jacques", titre: "mdc", adresse: { norue: "18", rue: "rue des glas", cp: "3500", ville: "RENNES" } },
+                { nom: "emile", titre: "mdc", adresse: { norue: "8bis", rue: "rue Gambette", cp: "29000", ville: "QUIMPER" } }
+            ]
+
+            
+            for (i in montablo){
+                let nom = montablo[i].nom.toUpperCase()
+                
+                let Div= document.getElementById("tablo")
+                let Titre= document.createElement("h1")
+                let monTitre= document.createTextNode(`${montablo[i].titre} ${nom}`)
+                Titre.appendChild(monTitre);
+                Div.appendChild(Titre);
+console.log(Div)
+                let add= montablo[i].adresse
+
+                let paragraphe= document.createElement("p");
+                Div.appendChild(paragraphe);
+                let Div2 =document.createElement("div");
+                Div2.setAttribute("class","adress")
+                paragraphe.appendChild(Div2);
+console.log(paragraphe)
+               
+                let monadd = document.createTextNode(` ${add.norue} ${add.rue} ${add.cp} ${add.ville}`)
+                Div2.appendChild(monadd);
+                    
+                
+
+            }
+            
+        </script>
+ 
+
+</body>
+
+</html>

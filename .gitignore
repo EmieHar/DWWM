@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vue.js
+/dist/
+/public/
+/*.log
+*.env
+
+# PHP
+/vendor/
+/composer.lock
+
+# Symfony
+/var/
+/vendor/
+/.env
+/public/bundles/
+/node_modules/
+/.symfony/
+/.env.local
+.env.*.local
+phpunit.xml
+phpunit.xml.dist
+/phpunit.result.cache
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db

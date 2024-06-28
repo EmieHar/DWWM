@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 2 Grid</title>
+    <style>
+        body{
+            margin:0;
+            padding:0
+        }
+
+
+        .gris {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: grey;
+        }
+
+        .jaune {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: yellow;
+        }
+
+        .vert {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: green;
+        }
+
+        @media screen and (max-width: 576px) {
+            .row1 {
+                display: grid;
+                grid-template-rows: 2;
+                
+            }
+
+            .row2 {
+                display: grid;
+                grid-template-rows: 3;
+            }
+        }
+
+        @media screen and (min-width: 576px) and (max-width: 992px) {
+            .row1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .row2 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .row1 {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .row2 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <h3>Mix</h3>
+        <div class="row1">
+            <div class="gris">Gris</div>
+            <div class="vert">Vert</div>
+        </div>
+        <div class="row2">
+            <div class="jaune">Jaune</div>
+            <div class="jaune">Jaune</div>
+            <div class="jaune">Jaune</div>
+        </div>
+   
+</body>
+
+</html>

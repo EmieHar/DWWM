@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each()</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        .orange {
+            background-color: orange;
+        }
+        .taillepolice {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h2>titre1</h2>
+    <button id="b2">change fond de titre1</button> 
+    <button id="b4">enlève la couleur de fond</button>
+    <h2>titre2</h2>
+    <h2>titre3</h2>
+    <h2>titre4</h2>
+    <h2>titre5</h2>
+    <h2>titre6</h2>
+    <button id="b3">change la police</button>
+   
+
+    <div id="montexte"></div>
+
+
+    <button id="b1">change image</button>
+    
+
+    <img id="image1" src="http://via.placeholder.com/250x150" /> <!-- placeholder.com génère une image à la taille souhaitée  -->
+    
+    <input id="input1" type="url">
+    <script>
+
+        $("#b3").click(function(){
+            $("h2").addClass("taillepolice");
+        })
+
+        $("#b2").click(function(){
+            $("h2:nth-child(1)").addClass("orange");
+        })
+
+        $("#b4").click(function(){
+            $("h2:nth-child(1)").removeClass("orange")
+        })
+    
+        $("h2").each(function(){
+            let titre= $(this).text()
+            console.log(titre)
+        })
+
+        console.log($("#image1").attr('src'))
+
+        $("#b1").click(function(){
+            $("#image1").attr('src',"http://via.placeholder.com/350")
+        })
+
+        $("#input1").blur(function(){
+                let valeur = $(this).val();//récup le contenu saisi dans input //$(this) signifie le sélecteur utilisé, éviter de le répéter
+                $("#image1").attr('src',valeur)//contenu placé dans div #test2 en forme HTML
+           
+        })
+        
+
+        // $("#montexte").text()// si .text() reste vide, il récupère le contenu du #montexte; si .text() avec valeur entre parenthères, ça ajoute cette valeur dans #montexte
+        //faire un champ input dans lequel vous mettez une URL d'image et qui change l'image dans #image1
+    </script>
+</body>
+</html>

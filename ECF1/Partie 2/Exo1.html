@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 1</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script type="text/javascript">
+
+        const array1 = ['paragraphe 1', 'paragraphe 2', 'paragraphe 3'];
+
+        for (item in array1){
+            let newP = document.createElement("p");
+            let newTxt = document.createTextNode(array1[item]);
+            newP.appendChild(newTxt);
+
+            let maDiv = document.getElementById("container");
+            maDiv.appendChild(newP);
+        }
+    </script>
+</body>
+</html>

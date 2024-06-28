@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grow shrink</title>
+<style>
+
+.container {
+    display: flex; 
+    height: 250px;
+    background-color: #00AADD ;
+    flex-flow: row wrap; 
+
+}
+
+.item1 {
+    flex-basis:500px ;
+    flex-grow:1;
+    flex-shrink: 0;
+    background-color: silver;
+    border: 1px solid #c3c3AA;
+}
+.item2 {
+    flex-basis:50px ;
+    flex-grow:2;
+    flex-shrink: 0;
+    background-color: greenyellow;
+    border: 1px solid #c3c3AA;
+}
+.item3 {
+    flex-basis:200px ;
+    flex-grow:1 ;
+    flex-shrink: 0;
+    background-color: brown;
+    border: 1px solid #c3c3AA;
+}
+
+
+</style> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item1" >1</div>
+        <div class="item2" >2</div>
+        <div class="item3" >3</div>
+    </div>
+    
+<!-- <div class="container ligne dim">
+        <div class="item" >1</div>
+        <div class="item" >2</div>
+        <div class="item" >3</div>
+    </div> -->
+
+</body>
+</html>
+

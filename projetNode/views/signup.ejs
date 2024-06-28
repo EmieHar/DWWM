@@ -1,0 +1,35 @@
+
+    <%- include ('partials/head.ejs') %>
+
+
+<% if (locals.message) { %>
+    <%= message %>
+<% } %>
+<body class="container">
+
+<header>
+</header>
+<main>
+    <div class="jumbotron">
+
+        <h1>S'enregistrer</h1>
+        <br>
+        <form action="/signup" method="post">
+
+            <label for="email">Votre adresse email:</label>
+            <input type="email" name="email" required/>
+<br>
+            <label for="password">Votre mot de passe:</label>
+            <input type="password" name="password" required/>
+<br>
+            <label for="verifypassword">Confirmer votre mot de passe:</label>
+            <input type="password" name="verifypassword" required/>
+<br>
+            <input type="checkbox" required> j'accepte les CGV
+<br><br>
+            <input type="submit" value="Enregistrer" />
+        </form>
+    </div>
+</main>
+
+    <%- include ('partials/footer.ejs') %>

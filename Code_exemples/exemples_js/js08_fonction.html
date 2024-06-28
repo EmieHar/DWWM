@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonctions</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const moncarre= function(x,y){
+            return x*x;
+        }
+        console.log(moncarre(12));
+
+        const power = function(base,exponent){
+            let result=1;
+            for (let count=0; count<exponent; count++){
+                result*=base;
+            }
+            return result;
+        }
+        console.log(10,2);
+
+        console.log("coconuts".slice(4,7));
+        console.log("coconut".indexOf("u"));
+        console.log("one two three".indexOf("ee"));
+        let sentence= "Secretary birds specialize in stomping";
+        let words = sentence.split(" ");
+        // words devient un tableau avec un mot par indice: words[0]-->"secretary" etc etc
+        console.log(words);
+
+        console.log(words.join("."));
+
+        console.log("LA".repeat(3));
+        console.log(sentence.length);
+
+        console.log(sentence.replace("birds","dogs"));
+
+        console.log(sentence.toUpperCase());
+        console.log(sentence.toLowerCase());
+
+        let text1="Hello";
+        let text2="World";
+        let text3= text1.concat(" ", text2);
+        console.log(text3);
+
+        let text4= "    Hello tout le monde ";
+        console.log(text4);
+        console.log(text4.trim());
+        // .trim() supprime les blancs/espaces avant et après la chaîne de caractères
+        // trimStart() --> enlève les blancs au début
+        // trimEnd()--> enlève les blancs à la fin
+
+        // pour effectuer un swap
+        let a=5;
+        let b=10;
+        let temp=a;
+        a=b;
+        b=temp;
+        console.log(a);
+        console.log(b);
+
+        let d=20;
+        let e=3;
+        console.log(d);
+        console.log(e);
+        
+
+        [d,e]=[e,d]//destructuring array
+        console.log(d);
+        console.log(e);
+       
+
+    </script>
+</body>
+</html>

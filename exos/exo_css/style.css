@@ -1,0 +1,197 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+        
+}
+
+h2,h3,h4{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #000;    
+}
+
+header{
+    width: 900px;
+    padding: 10px;
+}
+
+header h1{
+    margin-left: 10px ;
+    float: left;
+    
+}
+
+
+#choix{
+    display: none;
+    
+}
+@media screen and (max-device-width: 600px) {
+    #choix {
+        display: block;
+        margin-top: 30px;
+        margin-left:  auto;
+        margin-right: auto;
+    } 
+    nav{
+        display: none;
+    }
+}
+    
+nav{
+    float:right;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding-top: 15px ;
+    padding-right: 10px;  
+    font-weight: bold;  
+}
+
+
+#main-image{ 
+    width: 900px;  
+    height: 350px;
+    background-image: url("./images/main1.jpg") ;
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;    
+    clear: both;
+    padding-top: 100px;
+   
+}
+
+h2 strong{
+    font-size: xx-large;
+    font-weight: bold;
+ }
+
+.wrapper h2{
+    margin-bottom: 37px;
+    font-weight: lighter;
+    
+}
+
+.button-1{
+    padding: 10px 20px;
+    background-color: #ff7a01;
+    color: #fff;
+    border-radius: 10px;
+}
+
+section#steps {
+    width: 900px;
+}
+
+section#steps .wrapper{
+    margin: 70px 50px 70px 5px;    
+}
+
+section ul li {    
+    display: inline-block;
+    vertical-align: top;
+   
+}
+
+section ul li h4 { 
+   margin-top:112px;
+}
+
+#step-1{
+   
+    width:30%;
+    background-image: url("./images/steps-icon-1.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#step-2{
+    width: 30%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url("./images/steps-icon-2.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#step-3{
+    width: 30%;
+    background-image: url("./images/steps-icon-3.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#contact{
+    width: 900px;
+}
+
+#contact h3{  
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border-bottom:  1px solid #02b8dd;
+    padding : 10px ;   
+}
+
+.button-3{
+    background-color: #02b8dd;   
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.wrapper p{
+    padding-bottom: 30px;
+}
+
+.wrapper label{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#name{
+    border:none;
+    border-bottom: 1px solid #ff0000;
+}
+
+#email{
+    border:none;
+    border-bottom: 1px solid #ff0000;
+    margin-bottom: 30px;   
+}
+
+footer{    
+    width: 900px;
+    background-color: #444;   
+}
+
+footer h1{
+    padding-top:  50px;
+    color: #fff;
+}
+
+span.orange{
+    color: #ff7a01;
+}
+
+div.copyright{
+    color: #777;
+    font-size: x-small;
+    padding-bottom: 50px;
+}

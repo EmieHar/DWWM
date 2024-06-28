@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>VueJS</title>
+    
+</head>
+<body>
+    <h1>Essai Vue3</h1>
+    <div id="app">
+        <p>{{message}}</p>
+        <p>{{autreData}}</p>
+        <p>{{compteur}}</p>
+        <button @click="compteur++">Incremente</button>
+        <button @click="compteur--">décrémente</button><br><br>
+        <button @click="bonjour">Bonjour</button>
+        <p>{{attack}}</p>
+        <p v-html="attack"></p>
+        <input type="text" v-model ="uneData"><br>
+        <button @click="fonction">Salut</button>
+        <p>{{uneData}}</p>
+        <p v-if="seen">Je te VOIS</p>
+        <p v-else>Je ne te vois PAS</p>
+        <!-- v-bind (fait un lien avec le contenu) -->
+        <a v-bind:href="url">go url</a>
+    </div>
+
+    <script>
+        const {createApp} = Vue
+       createApp({
+            
+            data() { 
+                return{
+                    letitre:"essai vue3",
+                    message:"Hello world!",
+                    autreData: "autres données",
+                    compteur: 0,
+                    attack:"<a onmouseover=alert(document.cookies)>click me</a>",
+                    uneData: "Saloute",
+                    seen: false,//true pour que le paragraphe s'afffiche
+                    url:"http://www.google.com"
+                } 
+            },
+            methods: {
+                bonjour() {
+                    this.message="Bonjour les potos"
+                },
+                fonction() {
+                    this.uneData = this.uneData + " les gens!"
+                }
+            }
+        }).mount("#app")
+    </script>
+</body>
+</html>

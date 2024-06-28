@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>VueJS + axios</title>
+</head>
+<body>
+    <div id="app">
+
+    
+
+        <h1>bitcoin</h1>
+        <p v-for="(item,index) in infos"  v-bind:key="index">
+        {{ item.description }}
+        </p>
+
+    </div>
+    <script>
+    const {createApp} = Vue
+
+    createApp({
+        data() { 
+            return{
+                devises: null
+            }
+        },
+        mounted() { var self = this 
+            axios.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+                .then(function(response){
+                    self.devises = response.data.bpi
+                })
+                //.then(response => (this.devises = response.data.bpi)) 
+                // attention si on utilise la fonction classique à la place de la fonction flêchée
+                // il faudra suavegarder le this avant l'execution de axios dans une variable
+                // et utiliser cette variable.
+                // car la fonction fl^chée n'a pas de this (contrairement à la fonction classique)
+
+            
+        }
+    }).mount("#app")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 300px;
+        }
+
+        .items{
+            background-color: blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ne fonctionne qu'à partir d 'Internet explorer 10' -->
+    <div id="container">
+        <div class="items">a</div>
+        <div class="items">b</div>
+        <div class="items">c</div>
+        <div class="items">d</div>
+    </div>
+</body>
+
+</html>

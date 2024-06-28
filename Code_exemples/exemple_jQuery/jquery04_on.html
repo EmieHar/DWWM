@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonction on</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <style>
+        p{
+            width:100px;
+            height:50px;
+            background-color: lavender;
+            border: 1px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button>Ajoute un paragraphe</button>
+    <p>paragraphe 1</p>
+    <p>paragraphe 2</p>
+    <p>paragraphe 3</p>
+    <p>paragraphe 4</p>
+    <p>paragraphe 5</p>
+    <p>paragraphe 6</p>
+    <p>paragraphe 7</p>
+    </div>
+    <div>tototototototoTORO</div>
+    <script>
+        // $("p").click(function(){
+        //     console.log($(this).text())
+        // })
+
+        // $(document).on("click","p",function(){// .on ("évènement sur tout le doc", "mais précisément sur un sélecteur",function(){})
+        //     console.log($(this).text())
+        // })// deande bcp de ressource pour écouter tout le document --> prendre le plus proche parent du sélecteur ciblé
+
+        $(".container").on("click","p",function(){
+            console.log($(this).text())
+        })
+
+        $("button").click(function(){
+            $(".container").append("<p>paragraphe 8</p>")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.8/ejs.min.js"></script>
+    <title>template ejs</title>
+</head>
+<body>
+
+    <div id="blog"></div>
+
+    <script id="monTemplate" type="text/x-ejs-template">
+
+    <% for( let i=0; i<posts.length; i++) { %>
+
+        <h1><%= posts[i].title %></h1>
+        <p><%=posts[i].text %></p>
+        <p><i><%=posts[i].author %></i></p>
+        <hr>
+
+    <%}%>
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            let blogposts = [
+                {title: "blog",text:"blogblog",author:"machin"},
+                {title: "lolorem",text:"lorem ipsum",author:"bidule"},
+                {title: "pas de titre",text:"pas de texte",author:"chose"}
+
+            ]
+
+            let html =ejs.render($("#monTemplate").text(), {posts : blogposts})
+            console.log(html)
+            $("#blog").html(html)
+        })
+    </script>
+</body>
+</html>

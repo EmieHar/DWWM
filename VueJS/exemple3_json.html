@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>VueJS + JSON</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1>titre</h1>
+
+        <button @click ="fonction">Click here</button>
+
+       
+        <p>{{tableau}}</p>
+        <p v-for="(valeur, cle) in tableau" :key="cle">
+           {{cle}} : {{valeur}}
+        </p>
+       
+
+    </div>
+    <script>
+    const {createApp} = Vue
+
+    createApp({
+        data() { 
+            return{
+                tableau: null,
+            }
+        },
+        // mounted() { var self = this 
+        //     axios.get('http://localhost/phpjson.php')
+        //         .then(function(response){
+        //             self.tableau = response.data
+        //         })
+            
+        // }
+        methods:{
+            fonction(){
+                var self = this 
+                axios.get('http://localhost/phpjson.php')
+                     .then(function(response){
+                        self.tableau = response.data
+                    })
+            }
+        }
+    }).mount("#app")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 18</title>
+
+    <script>
+
+        const animals = [
+            { name: "cat", size: "little", weight: 5 },
+            { name: "puppy", size: "little", weight: 10 },
+            { name: "lion", size: "medium", weight: 150 },
+            { name: "elephant", size: "big", weight: 5000 }
+        ]
+
+        // boucle for
+        let noms_animaux = [];
+        for (let i = 0; i < animals.length; i++) {
+            noms_animaux.push(animals[i].name);
+        }
+        console.log("noms_animaux = ["+noms_animaux+" ]");
+            
+
+        // foreach
+        let noms_animaux2 = [];
+        animals.forEach(animal => noms_animaux2.push(animal.name));
+        console.log("noms_animaux = ["+noms_animaux2+" ]");
+
+        // fonction map
+        let noms_animaux3 = animals.map(animal => animal.name);
+        console.log("noms_animaux = ["+noms_animaux3+" ]"); 
+
+
+        // boucle for
+        let petits_animaux = [];
+        for (let i = 0; i < animals.length; i++) {
+            if(animals[i].size =="little"){
+                 petits_animaux.push(animals[i]);
+            }
+           
+        }
+        console.log(petits_animaux);
+
+        //filter
+        let petits_animaux2 = animals.filter(animal => animal.size === "little");
+
+        console.log(petits_animaux2);
+
+    </script>
+
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+</body>
+
+</html>

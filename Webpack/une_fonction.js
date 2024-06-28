@@ -1,0 +1,1 @@
+export const myfonction = message => console.log("mon message:" + message )

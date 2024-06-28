@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title>
+    <style>
+        .items {
+            background-color: blue;
+            border: 1px solid black;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 150px 200px 250px 200px;
+            grid-template-rows: 150px 200px; /* possible de répéter au lieu de tout noter repeat(2, 150px) */
+            grid-row-gap: 10px ;
+            grid-column-gap: 10px ;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <!-- ne fonctionne qu'à partir d 'Internet explorer 10' -->
+    <div id="container">
+        <div class="items">a</div>
+        <div class="items">b</div>
+        <div class="items">c</div>
+        <div class="items">d</div>
+        <div class="items">e</div>
+        <div class="items">f</div>
+    </div>
+</body>
+
+</html>

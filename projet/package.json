@@ -1,0 +1,28 @@
+{
+  "name": "projet",
+  "version": "1.0.0",
+  "description": "projet site cms like pour click and collect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmieHar/projetNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmieHar/projetNode/issues"
+  },
+  "homepage": "https://github.com/EmieHar/projetNode#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.1.2"
+  }
+}

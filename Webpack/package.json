@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}

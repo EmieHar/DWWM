@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn1">change css</button>
+    <button id="btn2">Cache le texte</button>
+    <button id="btn3">ajoute du texte</button>
+
+    <input type="text" id="inp1">
+    
+    <div id="test">text de test</div>
+    <div id="test2"></div>
+
+    <script>
+        $(document).ready(function(){ //quand HTML est chargé
+            $("#btn1").click(function(){ //guette le click sur bouton 1
+                $("#test").css("color","red");// change la couleur (css) de la div #test
+                $("#test2").css("color","red"); 
+            })
+
+            $("#btn2").click(function(){
+                $("#test").toggle();
+            })
+
+            // $("#btn3").click(function(){
+            //     $("#test2").text("c'est un essai");
+            // })
+
+            $("#btn3").click(function(){
+                $("#test2").html("<strong>c'est un essai</strong>");
+            })
+
+            $("#inp1").keyup(function(){
+                let valeur = $(this).val();//récup le contenu saisi dans input //$(this) signifie le sélecteur utilisé, éviter de le répéter
+                $("#test2").html("<strong>"+valeur+"</strong>")//contenu placé dans div #test2 en forme HTML
+            })
+        })
+    </script>
+</body>
+</html>

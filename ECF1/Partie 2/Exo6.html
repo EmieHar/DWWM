@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <title>Exo 6</title>
+
+    <script>
+        $(document).ready(function () {
+        
+            $(document).on("click", "#btn", function (event) {
+                var name = $("#nom").val();
+                $("#afficheNom").append(name);
+            }); 
+        }); 
+    </script>
+
+</head>
+
+<body>
+
+    <p id="afficheNom"></p> 
+    <input id="nom"> 
+    <button id="btn">GO</button>
+
+</body>
+
+</html>

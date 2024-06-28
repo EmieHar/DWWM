@@ -1,0 +1,40 @@
+
+
+<style>
+
+form {
+    witdh: 60%;
+}
+
+form textarea {
+    resize:none;
+    witdh: 60%;
+    min-height: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+div {
+    padding: 10px 0;
+}
+</style>
+
+
+
+<h2>Créer un compte</h2>
+<form method="post" action="recordutilisateur">
+<div>
+    <label for="email">Votre adresse mail:</label><br>
+    <input type="email" placeholder="email" name="email" required/><br>
+
+    <label for="password">Votre mot de passe:</label><br>
+    <input type="password" name="password" required/><br>
+
+    <label for="verifypassword">Tapez à nouveau votre mot de passe:</label><br>
+    <input type="password" name="verifypassword" required/><br>
+</div>
+<button type="submit">Création</button><hr>
+
+</form>

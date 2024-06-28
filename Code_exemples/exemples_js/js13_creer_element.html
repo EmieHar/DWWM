@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un élément</title>
+    <style>
+        #bouton,
+        #bnav,
+        #bnav2 {
+            width: 200px;
+            height: 60px;
+            color: brown;
+            background-color: aquamarine;
+            border: 1px solid red;
+        }
+
+        .style1 {
+            color: purple;
+            font-size: large;
+            background-color: aqua;
+        }
+
+        .style2 {
+            background-color: bisque;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <button>Créer un paragraphe</button>
+
+    <script type="text/javascript">
+        let app = document.getElementById("app");
+
+        // document.getElementsByTagName("button")[0].addEventListener("click", mafonction)
+        
+        // function mafonction (){
+        //     // let element = document.createElement("p");
+        //     // let monTexte= document.createTextNode("le nouveau p est arrivé! P sur la terre");
+        //     // element.appendChild(monTexte);
+        //     // app.appendChild(element);
+        
+        //     // document.getElementsByTagName("button")[0].addEventListener("click",function(){
+        //     //  lien.remove();
+        //     // });
+        //     let lien = document.createElement("a");
+        //     //lien est égal à <a></a>
+        //     lien.setAttribute("href","http://www.google.fr");
+        //     //lien est égal à <a href="https://www.google.fr"></a>
+        //     let monTexte= document.createTextNode("Go GOOGLE");
+        //     // lien est égal à <a href="https://www.google.fr">Go GOOGLE</a>
+        //     lien.appendChild(monTexte);
+        //     app.appendChild(lien);
+
+        //     document.getElementsByTagName("button")[0].removeEventListener("click", mafonction)
+           
+        // }
+        document.getElementsByTagName("button")[0].addEventListener("click", function (){
+            // let element = document.createElement("p");
+            // let monTexte= document.createTextNode("le nouveau p est arrivé! P sur la terre");
+            // element.appendChild(monTexte);
+            // app.appendChild(element);
+        
+            // document.getElementsByTagName("button")[0].addEventListener("click",function(){
+            //  lien.remove();
+            // });
+            let lien = document.createElement("a");
+            //lien est égal à <a></a>
+            lien.setAttribute("href","http://www.google.fr");
+            //lien est égal à <a href="https://www.google.fr"></a>
+            let monTexte= document.createTextNode("Go GOOGLE");
+            // lien est égal à <a href="https://www.google.fr">Go GOOGLE</a>
+            lien.appendChild(monTexte);
+            app.appendChild(lien);
+
+            document.getElementsByTagName("button")[0].removeEventListener("click", arguments.callee)
+            // argument.callee est un pointeur sur la fonction elle-même
+        })
+    </script>
+</body>
+
+</html>

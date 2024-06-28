@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opérateurs boucle</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let number=0;
+        while (number<=12){
+            console.log(number);
+            number=number+1 // idem number +=2
+        }
+
+        let num = 5;
+        if(num <10){
+            console.log("small");
+        }
+        else if(num<100){
+            console.log("medium");
+        }
+        else{
+            console.log("large");
+        }
+
+        switch(prompt("what is the weather like?")){
+            case "rainy":
+                console.log("remember to bring an umbrella."); break;
+            case "sunny":
+                console.log("dress lightly."); break;
+            case "cloudy":
+                console.log("go outside."); break;
+            default:
+                console.log("unknow weather type!"); break;
+        }    
+
+    </script>
+</body>
+</html>

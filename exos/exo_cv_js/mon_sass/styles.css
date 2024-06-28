@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "deuxieme_rangregular";
+  src: url("../font/deuxieme_rang/deuxieme_rang-webfont.woff2") format("woff2"), url("../font/deuxieme_rang/deuxieme_rang-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "super_mario_bros._2regular";
+  src: url("../font/super_mario_bros_2/super_mario_bros._2-webfont.woff2") format("woff2"), url("../font/super_mario_bros_2/super_mario_bros._2-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opendyslexicregular";
+  src: url("../font/open_dyslexic/opendyslexic-regular-webfont.woff2") format("woff2"), url("../font/open_dyslexic/opendyslexic-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opendyslexicitalic";
+  src: url("../font/open_dyslexic/opendyslexic-italic-webfont.woff2") format("woff2"), url("../font/open_dyslexic/opendyslexic-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opendyslexicbold";
+  src: url("../font/open_dyslexic/opendyslexic-bold-webfont.woff2") format("woff2"), url("../font/open_dyslexic/opendyslexic-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-image: url("../images/fleurs_fond2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  background-color: rgba(201, 253, 242, 0.7);
+  width: 100%;
+  color: rgba(21, 124, 139, 0.9254901961);
+  font-size: 2rem;
+  margin-top: 2%;
+}
+
+#debut {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+.accueil {
+  display: none;
+}
+
+#principal {
+  font-family: "opendyslexicregular";
+  width: auto;
+}
+
+#h2 {
+  font-family: "deuxieme_rangregular";
+  font-size: 3rem;
+}
+
+#h1 {
+  font-family: "super_mario_bros._2regular";
+  font-size: 3rem;
+}
+
+#border {
+  border-right: 1px solid #5cb85c;
+}
+
+@media (max-width: 576px) {
+  #border {
+    border-right: none;
+    border-bottom: 1px solid #5cb85c;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+#border-right {
+  border-right: 1px solid #5cb85c;
+}
+
+@media (max-width: 1200px) {
+  #border-right {
+    border-right: none;
+  }
+}
+#dev, #para {
+  border-right: 1px solid #5cb85c;
+}
+
+@media (max-width: 1200px) {
+  #dev, #para {
+    border-right: none;
+  }
+}
+.titre,
+.titre_corps,
+.paragraphe_corps,
+.footer_paragraphe {
+  color: rgba(40, 233, 159, 0.9843137255);
+}
+
+.nav,
+.footer_titre,
+.corps2 {
+  background-color: rgba(201, 253, 242, 0.7);
+}
+
+.corps2,
+.ancre,
+.footer_titre_contact,
+.nom,
+.prenom,
+.sexe,
+.fonction,
+.message {
+  color: rgba(21, 124, 139, 0.9254901961);
+}
+
+form {
+  background-color: rgba(201, 253, 242, 0.7);
+}
+
+.bouton {
+  background-color: #c9fdf2;
+  color: #17a2b8;
+}
+
+/*# sourceMappingURL=styles.css.map */

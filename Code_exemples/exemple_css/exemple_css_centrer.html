@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centrer</title>
+    <style>
+        
+        .container {
+            display:flex ;
+            background-color: grey ;
+            height:500px;
+            justify-content: center;   /* centre sur l'axe primaire   */ 
+            align-items:flex-end ;     /* centre sur l'axe secondaire  */ 
+        }
+
+        .item {
+            height: 150px;
+            background-color: aqua;
+            font-size: 24px;
+            text-align:center;
+            border-radius: 8px;
+            width: 100px;
+        }
+
+        /* pour centrer verticalement le texte à l'interieur */
+        .item span {
+            line-height: 150px;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"><span>1</span></div>
+        <div class="item"><span>2</span></div>
+    </div>
+    
+</body>
+</html>

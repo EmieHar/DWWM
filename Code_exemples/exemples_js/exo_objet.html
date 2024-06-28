@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo</title>
+</head>
+
+<body>
+    <script type='text/javascript'>
+
+        // const montablo=[
+        //     {nom: "pierre",titre:"Doctor",adresse:"8 rue des lilas 29200 Brest"},
+        //     {nom: "paul",titre:"Pr",adresse:"8 rue maréchal lilas 29200 Brest"},
+        //     {nom: "jacques",titre:"mdc",adresse:"8 rue victor machin 29200 Brest"},
+        //     {nom: "emile",titre:"mdc",adresse:"8 rue bayard 29200 Brest"},
+        // ]
+
+        // for (i=0; i<montablo.length; i++){
+        //         console.log(`Bonjour je suis ${montablo[i].titre} ${montablo[i].nom} et j'habite ${montablo[i].adresse} `);
+
+        // }
+        // faire une boucle qui affiche pour chaque objet:
+        // bonjour je suis titre et j'habite adresse.
+
+
+        // const montablo2=[
+        //     {nom: "pierre",titre:"Doctor",adresse:"8 rue des lilas 29200 Brest", tphs:["2222","4444"]},
+        //     {nom: "paul",titre:"Pr",adresse:"8 rue maréchal lilas 29200 Brest",tphs:["3333","5555","6666"]},
+        //     {nom: "jacques",titre:"mdc",adresse:"8 rue victor machin 29200 Brest",tphs:["2232","9944"]},
+        //     {nom: "emile",titre:"mdc",adresse:"8 rue bayard 29200 Brest",tphs:["2252"]},
+        // ]
+        // for (let i=0; i<montablo2.length; i++){
+
+        //     console.log(`Bonjour je suis ${montablo2[i].titre} ${montablo2[i].nom}, j'habite ${montablo2[i].adresse}`)
+        //         let tel = montablo2[i].tphs;  
+
+        //     for(let j=0; j<tel.length; j++){
+        //         console.log(`et mes numéros sont:${j+1} - ${tel[j]}.`)
+        //     }
+
+
+        // }
+
+        const montablo3 = [
+            { nom: "pierre", titre: "Doctor", adresse: { norue: "8", rue: "rue des lilas", cp: "29200", ville: "BREST" }, tphs: ["2222", "4444"] },
+            { nom: "paul", titre: "Pr", adresse: { lieudit: "kergac", cp: "29800", ville: "Landerneau" }, tphs: ["3333", "5555", "6666"] },
+            { nom: "jacques", titre: "mdc", adresse: { norue: "8", rue: "rue victor machin", cp: "29200", ville: "Brest" }, tphs: ["2232", "9944"] },
+            { nom: "emile", titre: "mdc", adresse: { norue: "8", rue: "rue bayard leveinard", cp: "29200", ville: "Brest" }, tphs: ["2252"] },
+        ]
+
+        // for (let i = 0; i < montablo3.length; i++) {
+        //     let add= montablo3[i].adresse;
+        //     console.log(`Bonjour je suis ${montablo3[i].titre} ${montablo3[i].nom}, j'habite au ${add.norue} ${add.rue} à ${add.ville} (${add.cp}), et mes numéros sont:`)
+
+        //     let tel = montablo3[i].tphs;
+
+        //     for (let j = 0; j < tel.length; j++) {
+        //         console.log(`${j + 1} : ${tel[j]}`)
+        //     }
+        // }
+        for (let i in montablo3) {
+            console.log(`Bonjour je suis ${montablo3[i].titre} ${montablo3[i].nom}, j'habite au:`)
+            
+            let add= montablo3[i].adresse
+            
+            for(let j in add){
+                console.log(`   ${j} : ${add[j]},`)
+               
+            }
+            
+            console.log(`Et mes numéros sont:`)
+            
+            let tel = montablo3[i].tphs;
+
+            for (let k = 0; k < tel.length; k++) {
+                console.log(`   ${k + 1} : ${tel[k]}`)
+            }
+        }
+    </script>
+
+</body>
+
+</html>

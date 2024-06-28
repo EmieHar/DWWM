@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query/setTimeout/resize</title>
+    <style>
+        div {
+            background-color: orange;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Documet</h1>
+    <div></div>
+    <a href="http://google.fr">gogogogogo GOOGLE</a>
+    <script>
+        let lien=document.querySelector("a")
+        lien.addEventListener("click",(event)=>{
+            console.log("click click dessus")
+            event.preventDefault()//empêche d'agir comme il le devrait, met en pause
+        })
+//------------------RESIZE---------------------------
+        window.addEventListener("resize",(e)=>{
+            console.log(e.target.document)//possible de cibler différents éléments lors resizing
+        })
+
+//---------------------SETTIMEOUT-------------------------
+        setTimeout(function(){
+            console.log("youhouhou");
+        },3000)
+        let interval= setInterval(function(){
+            console.log("coucou");
+        },2000);
+        window.addEventListener("click",()=>{
+            console.log("STOP")
+            clearInterval(interval)
+        })
+       
+    </script>
+</body>
+</html>

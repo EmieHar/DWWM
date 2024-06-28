@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récup input</title>
+</head>
+
+<body>
+    <h1>Document</h1>
+    <p>
+        nom:
+        <input type="text" id="nom" name="nom" placeholder="saisir ton ultme bafouille" />
+    </p>
+    <p id="saisie"></p>
+
+
+    <script>
+        // document.getElementById("nom").addEventListener("focus", function () {
+        //     console.log("je rentre dans le nom");
+        // });
+        // document.getElementById("nom").addEventListener("blur", function () {
+        //     console.log("je sors du nom");
+        // });
+        // document.getElementById("nom").addEventListener("blur", function () {
+        //     console.log(document.getElementById("nom").value);//contenue de l'élément dont l'id est "nom", ici valeur saisie dans l'input
+        // });
+        // document.getElementById("nom").addEventListener("blur", function () {
+        //     let saisi = document.getElementById("nom").value;
+        //     let affiche = document.getElementById("saisie")
+        //     affiche.innerHTML = saisi
+
+        // });
+        // document.getElementById("nom").addEventListener("keydown", function () {
+        //     document.getElementById("nom").addEventListener("keyup", function () {
+        //     let saisi = document.getElementById("nom").value;
+        //     let affiche = document.getElementById("saisie")
+        //     affiche.innerHTML = saisi
+        //     });
+        // });
+
+        document.getElementById("nom").addEventListener("keyup",function(event){
+            console.log(event);
+            document.getElementById("saisie").innerHTML = document.getElementById("nom").value
+        })
+    </script>
+
+</body>
+
+</html>

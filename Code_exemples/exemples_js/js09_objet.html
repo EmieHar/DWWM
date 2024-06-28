@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objet</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let chevy01 = {
+            marque: 'Chevy',
+            modele: 'Bel Air',
+            annee: 1957,
+            couleur: 'red',
+            passagers: 2,
+            décapotable: false,
+            kilometrage: 1021,
+            demarree: false,
+            essence: 0,
+            credits:0,
+            conduit: false,
+
+            allerALaBanque: function(){
+                this.credits = 100000;
+                console.log("avis de recherche suite à un braquage");
+                return this
+            },
+
+            faireLePlein: function (qte) {
+               if (this.credits>0){
+                    this.essence = qte;
+                    console.log('le plein est fait');
+                    
+               } else { 
+                    console.log('besoin de sous');
+               }
+                return this // ramène l'adresse de l'objet général pour pouvoir le réutiliser dans une autre fonction
+            },
+
+            demarre: function () {
+                if (this.essence > 0) {
+                    this.demarree = true;
+                    console.log('démarre...');
+                } else {
+                    console.log(`Il faut de l'essence`);
+                }
+                return this
+
+            },
+
+            stop: function () {
+                if(this.demarree){
+                    console.log('stop...');
+                }
+                this.demarree= false;
+                
+            },
+
+            conduite: function () {
+                this.conduit = true;
+                if (this.demarree) {
+                    console.log("vroum");
+                } else {
+                    console.log(`la voiture avance mieux si on la démarre d'abord`);
+                }
+                return this
+
+            }
+        };
+
+        if(chevy01.essence === 0){
+            console.log(chevy01.faireLePlein());
+            chevy01.allerALaBanque().faireLePlein(100).demarre().conduite().stop() //possible car référence objet retournée
+        //     // chevy01.faireLePlein();
+        //     // chevy01.demarre();
+        //     // chevy01.conduite();
+        //     // chevy01.stop();
+        }
+        // 
+        // console.log(chevy01.allerALaBanque())
+        // console.log(typeof chevy01);
+        // console.log(chevy01);
+        // console.log(chevy01.décapotable);
+        // console.log(chevy01.demarree);
+
+
+        function Personne(nom, prenom,age,sexe,){
+            this.nom=nom;
+            this.prenom=prenom;
+            this.age=age;
+            this.sexe=sexe;
+            this.affiche= function(){
+                console.log(`je m'apelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans`);
+            };
+            
+            //fonction fléchée
+            this.affiche2 = () => console.log(`je m'apelle ${this.prenom} ${this.nom} et j'ai ${this.age} ans`.toUpperCase());
+            
+            
+        }
+
+        let paul=new Personne("Smith","Paul",34,"M");
+        console.log(paul);
+
+        let isa=new Personne("Addams","Isabella",50,"S");
+        console.log(isa);
+
+        paul.affiche2();
+        paul.affiche();
+    </script>
+</body>
+
+</html>

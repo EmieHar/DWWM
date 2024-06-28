@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">Click me</button>
+    <button id="b2">Réactive l'autre</button>
+
+    <script type="text/javascript">
+
+        let button = document.getElementById('b1');
+
+        function once() {
+            console.log('bouton click me désactivé');
+            button.removeEventListener('click', once);
+        }
+
+       function activate(){
+        button.addEventListener('click', once);
+        console.log('bouton Click me activé');
+       }
+        
+       
+
+        let bouton = document.getElementById('b2');
+
+        activate();
+        bouton.addEventListener('click', activate);
+        
+    </script>
+</body>
+</html>

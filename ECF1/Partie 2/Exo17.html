@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 17</title>
+
+    <script>
+   
+    function Personne(nom, prenom,age,sexe,){
+            this.nom=nom;
+            this.prenom=prenom;
+            this.age=age;
+            this.sexe=sexe;
+            // this.marcher= () => console.log('promenons nous dans les bois');
+            // this.manger= () => console.log('miam miam miam');
+            
+    }
+
+    Personne.prototype.marcher = function(){
+        console.log(this.nom + ' ' + this.prenom+ ' se promène dans les bois');
+    }
+
+    Personne.prototype.manger = function(){
+        console.log(this.nom + ' ' + this.prenom+ ' mange un beignet');
+    }
+
+    let personne1 = new Personne ("Goasduff","Jean","M",33) ;
+            console.log(personne1)
+            personne1.marcher();
+            personne1.manger();
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
